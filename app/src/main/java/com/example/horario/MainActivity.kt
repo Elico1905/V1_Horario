@@ -1,5 +1,6 @@
 package com.example.horario
 
+import android.content.Intent
 import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,7 +20,11 @@ class MainActivity : AppCompatActivity() {
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE
         setContentView(R.layout.activity_main)
 
-
+        home.setOnClickListener {
+            val intent: Intent = Intent(this, Login::class.java)
+            startActivity(intent)
+            finish()
+        }
         bloquear.setOnClickListener {
             if (bloqueado){
                 bloquear.setImageResource(R.drawable.ic_candado_01)

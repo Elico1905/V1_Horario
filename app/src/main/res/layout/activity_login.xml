@@ -4,10 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".Login"
+    android:background="@color/verde_fuerte">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_superior_02"
+        android:scaleType="fitStart"/>
 
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:rotationX="180"
+        android:rotationY="180"
+        android:scaleType="fitStart"
+        android:src="@drawable/ic_superior" />
+
+</RelativeLayout>
 
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <androidx.cardview.widget.CardView
+            android:clickable="true"
+            android:id="@+id/carta"
+            android:layout_width="match_parent"
+            app:cardCornerRadius="20dp"
+            android:layout_height="200dp"
+            android:backgroundTint="#EDFFFFFF"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:foregroundGravity="center"/>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
