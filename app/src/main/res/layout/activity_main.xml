@@ -322,6 +322,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
                     <TextView
+                        android:id="@+id/c1"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:clickable="true"
                         android:layout_width="match_parent"
@@ -336,168 +337,190 @@
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c6"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c11"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c16"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c21"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c26"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c31"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c36"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c41"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c46"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c51"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c56"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
@@ -530,6 +553,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
                     <TextView
+                        android:id="@+id/c2"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:clickable="true"
                         android:layout_width="match_parent"
@@ -544,168 +568,190 @@
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c7"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c12"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c17"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c22"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c27"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c32"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c37"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c42"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c47"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c52"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c57"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
@@ -739,6 +785,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
                     <TextView
+                        android:id="@+id/c3"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:clickable="true"
                         android:layout_width="match_parent"
@@ -753,168 +800,190 @@
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c8"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c13"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c18"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c23"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c28"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c33"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c38"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c43"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c48"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c53"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c58"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
@@ -947,6 +1016,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
                     <TextView
+                        android:id="@+id/c4"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:clickable="true"
                         android:layout_width="match_parent"
@@ -961,168 +1031,190 @@
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c9"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c14"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c19"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c24"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c29"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c34"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c39"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c44"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c49"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c54"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c59"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
@@ -1154,183 +1246,207 @@
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c5"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c10"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c15"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c20"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c25"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c30"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c35"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c40"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c45"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c50"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c55"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
+                        android:id="@+id/c60"
                         android:layout_width="match_parent"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/gris"
                         android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
                     <Space
                         android:layout_width="wrap_content"
                         android:layout_height="6dp" />
