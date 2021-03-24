@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#BDBDBD">
+    android:background="#BDBDBD"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,1241 +15,300 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:background="@color/colorPrimary"
+            android:orientation="horizontal"
             android:paddingTop="5dp"
             android:paddingBottom="5dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
                 android:text="Grupo: "
                 android:textColor="#000000"
-                android:textSize="30dp"
-                android:layout_marginStart="20dp"
-                android:layout_gravity="center"/>
+                android:textSize="30dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="078CA"
-                android:textSize="30dp"
-                android:textColor="#000000"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:layout_gravity="center"/>
-            <ImageView
-                android:layout_gravity="center"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/ic_add"
-                android:layout_marginEnd="10dp"
-                android:foreground="@drawable/effect_ripple"
-                android:clickable="true"/>
-            <ImageView
-                android:layout_gravity="center"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/ic_candado_01"
-                android:layout_marginEnd="10dp"
-                android:foreground="@drawable/effect_ripple"
-                android:clickable="true"/>
+                android:text="078CA"
+                android:textColor="#000000"
+                android:textSize="30dp" />
 
             <ImageView
-                android:layout_gravity="center"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:src="@drawable/ic_home"
+                android:layout_gravity="center"
                 android:layout_marginEnd="10dp"
+                android:clickable="true"
                 android:foreground="@drawable/effect_ripple"
-                android:clickable="true"/>
+                android:src="@drawable/ic_settings" />
+
+            <ImageView
+                android:id="@+id/bloquear"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"
+                android:foreground="@drawable/effect_ripple"
+                android:src="@drawable/ic_candado_02" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"
+                android:foreground="@drawable/effect_ripple"
+                android:src="@drawable/ic_home" />
 
         </LinearLayout>
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-
+                android:orientation="vertical">
                 <Space
-                    android:layout_width="5dp"
-                    android:layout_height="match_parent" />
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"/>
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center"
-                        android:background="@color/azul"
-                        android:layout_weight="1"
-                        android:textColor="@color/Blanco_Letras"
-                        android:text="Horas / Dias"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:background="@color/azul"
-                        android:textColor="@color/Blanco_Letras"
-                        android:layout_weight="1"
-                        android:text="07:00 a 08:00 "
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:background="@color/azul"
-                        android:textColor="@color/Blanco_Letras"
-                        android:layout_weight="1"
-                        android:text="08:00 a 09:00"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:background="@color/azul"
-                        android:textColor="@color/Blanco_Letras"
-                        android:layout_weight="1"
-                        android:text="09:00 a 10:00"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:background="@color/azul"
-                        android:textColor="@color/Blanco_Letras"
-                        android:layout_weight="1"
-                        android:text="10:00 a 11:00"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:background="@color/azul"
-                        android:textColor="@color/Blanco_Letras"
-                        android:layout_weight="1"
-                        android:text="11:00 a 12:00"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:background="@color/azul"
-                        android:textColor="@color/Blanco_Letras"
-                        android:layout_weight="1"
-                        android:text="12:00 a 01:00"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:background="@color/azul"
-                        android:textColor="@color/Blanco_Letras"
-                        android:layout_weight="1"
-                        android:text="01:00 a 02:00"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:background="@color/azul"
-                        android:textColor="@color/Blanco_Letras"
-                        android:layout_weight="1"
-                        android:text="02:00 a 03:00"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:background="@color/azul"
-                        android:textColor="@color/Blanco_Letras"
-                        android:layout_weight="1"
-                        android:text="03:00 a 04:00"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:background="@color/azul"
-                        android:textColor="@color/Blanco_Letras"
-                        android:layout_weight="1"
-                        android:text="04:00 a 05:00"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:background="@color/azul"
-                        android:textColor="@color/Blanco_Letras"
-                        android:layout_weight="1"
-                        android:text="05:00 a 06:00"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:background="@color/azul"
-                        android:textColor="@color/Blanco_Letras"
-                        android:layout_weight="1"
-                        android:text="06:00 a 07:00"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_marginBottom="6dp">
 
-                </LinearLayout>
-                <Space
-                    android:layout_width="5dp"
-                    android:layout_height="match_parent" />
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
                     <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
                     <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
                         android:layout_gravity="center"
-                        android:background="@color/azul"
                         android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="Hora / Dia"
+                        android:textAlignment="center"
                         android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="Lunes"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:id="@+id/c1"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:background="@color/gris"
-                        android:layout_weight="1"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c6"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c11"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c16"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c21"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c26"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c31"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c36"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c41"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c46"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c51"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c56"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                </LinearLayout>
-                <Space
-                    android:layout_width="5dp"
-                    android:layout_height="match_parent" />
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center"
-                        android:background="@color/azul"
-                        android:layout_weight="1"
                         android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="Martes"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:id="@+id/c2"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:background="@color/gris"
-                        android:layout_weight="1"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c7"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c12"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c17"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c22"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c27"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c32"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c37"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c42"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c47"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c52"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c57"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                </LinearLayout>
-                <Space
-                    android:layout_width="5dp"
-                    android:layout_height="match_parent" />
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center"
-                        android:background="@color/azul"
-                        android:layout_weight="1"
                         android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="Miercoles"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:id="@+id/c3"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:background="@color/gris"
-                        android:layout_weight="1"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c8"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c13"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c18"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c23"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c28"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c33"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c38"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c43"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c48"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c53"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c58"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                </LinearLayout>
-                <Space
-                    android:layout_width="5dp"
-                    android:layout_height="match_parent" />
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center"
-                        android:background="@color/azul"
-                        android:layout_weight="1"
                         android:textColor="@color/Blanco_Letras"
-                        android:text="jueves"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textSize="17dp" />
+
                     <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:id="@+id/c4"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:background="@color/gris"
-                        android:layout_weight="1"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
 
                     <TextView
-                        android:id="@+id/c9"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c14"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c19"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c24"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c29"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c34"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c39"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c44"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c49"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c54"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-
-                    <TextView
-                        android:id="@+id/c59"
-                        android:layout_width="match_parent"
-                        android:layout_height="41dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@color/gris"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:gravity="center"
-                        android:text="@string/nulo"
-                        android:textAlignment="center"
-                        android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                </LinearLayout>
-                <Space
-                    android:layout_width="5dp"
-                    android:layout_height="match_parent" />
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                    <TextView
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:layout_gravity="center"
                         android:background="@color/azul"
-                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="Jueves"
+                        android:textAlignment="center"
                         android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
                         android:text="Viernes"
                         android:textAlignment="center"
-                        android:textSize="17dp"
-                        android:gravity="center"/>
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
                     <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/row_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_marginBottom="6dp">
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="07:00 a 08:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c1"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c2"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c3"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c4"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
 
                     <TextView
                         android:id="@+id/c5"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
@@ -1259,14 +318,123 @@
                         android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
                         android:textSize="17dp" />
+
                     <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/row_02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_marginBottom="6dp">
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="08:00 a 09:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c6"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c7"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c8"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c9"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
 
                     <TextView
                         android:id="@+id/c10"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
@@ -1276,14 +444,123 @@
                         android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
                         android:textSize="17dp" />
+
                     <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/row_03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_marginBottom="6dp">
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="09:00 a 10:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c11"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c12"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c13"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c14"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
 
                     <TextView
                         android:id="@+id/c15"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
@@ -1293,14 +570,123 @@
                         android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
                         android:textSize="17dp" />
+
                     <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/row_04"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_marginBottom="6dp">
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="10:00 a 11:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c16"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c17"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c18"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c19"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
 
                     <TextView
                         android:id="@+id/c20"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
@@ -1310,14 +696,123 @@
                         android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
                         android:textSize="17dp" />
+
                     <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/row_05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_marginBottom="6dp">
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="11:00 a 12:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c21"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c22"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c23"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c24"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
 
                     <TextView
                         android:id="@+id/c25"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
@@ -1327,14 +822,123 @@
                         android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
                         android:textSize="17dp" />
+
                     <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/row_06"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_marginBottom="6dp">
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="12:00 a 01:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c26"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c27"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c28"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c29"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
 
                     <TextView
                         android:id="@+id/c30"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
@@ -1344,14 +948,123 @@
                         android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
                         android:textSize="17dp" />
+
                     <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/row_07"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_marginBottom="6dp">
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="01:00 a 02:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c31"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c32"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c33"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c34"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
 
                     <TextView
                         android:id="@+id/c35"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
@@ -1361,14 +1074,123 @@
                         android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
                         android:textSize="17dp" />
+
                     <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/row_08"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_marginBottom="6dp">
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="02:00 a 03:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c36"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c37"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c38"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c39"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
 
                     <TextView
                         android:id="@+id/c40"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
@@ -1378,14 +1200,123 @@
                         android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
                         android:textSize="17dp" />
+
                     <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/row_09"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_marginBottom="6dp">
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="03:00 a 04:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c41"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c42"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c43"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c44"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
 
                     <TextView
                         android:id="@+id/c45"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
@@ -1395,14 +1326,123 @@
                         android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
                         android:textSize="17dp" />
+
                     <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/row_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_marginBottom="6dp">
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="04:00 a 05:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c46"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c47"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c48"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c49"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
 
                     <TextView
                         android:id="@+id/c50"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
@@ -1412,14 +1452,123 @@
                         android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
                         android:textSize="17dp" />
+
                     <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/row_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_marginBottom="6dp">
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="05:00 a 06:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c51"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c52"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c53"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c54"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
 
                     <TextView
                         android:id="@+id/c55"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
@@ -1429,14 +1578,123 @@
                         android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
                         android:textSize="17dp" />
+
                     <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/row_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_marginBottom="6dp">
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/azul"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="06:00 a 07:00"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c56"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c57"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c58"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/c59"
+                        android:layout_width="0dp"
+                        android:layout_height="41dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/gris"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/nulo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
+                        android:textSize="17dp" />
+
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
 
                     <TextView
                         android:id="@+id/c60"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="41dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
@@ -1446,20 +1704,36 @@
                         android:gravity="center"
                         android:text="@string/nulo"
                         android:textAlignment="center"
+                        android:textColor="@color/Blanco_Letras"
                         android:textSize="17dp" />
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="6dp" />
-                </LinearLayout>
-                <Space
-                    android:layout_width="5dp"
-                    android:layout_height="match_parent" />
 
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
         </ScrollView>
+
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BC232323"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="20dp">
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

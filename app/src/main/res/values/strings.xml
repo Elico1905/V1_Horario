@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Horario</string>
-    <string name="nulo">123456789012</string>
+    <string name="nulo">123</string>
+    <string name="nada"></string>
 
 
 </resources>
