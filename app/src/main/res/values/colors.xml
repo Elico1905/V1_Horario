@@ -13,6 +13,7 @@
     <color name="amarillo">#FDD835</color>
     <color name="verde_fuerte">#00897B</color>
 
+    <color name="Blanco_Letras">#CEFFFFFF</color>
     <color name="Negro">#FF000000</color>
     <color name="Blanco">#FFFFFFFF</color>
 </resources>
