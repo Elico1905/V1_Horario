@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "773111657136",
+    "project_id": "horario-a1bfe",
+    "storage_bucket": "horario-a1bfe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773111657136:android:2725cc2b84675539b00175",
+        "android_client_info": {
+          "package_name": "com.example.horario"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773111657136-64tu5uvspagdkscfmcsjsca7ktuobqm0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXRxNHKNUQyEaQmUL5y7sVV0KxEbLHzwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773111657136-64tu5uvspagdkscfmcsjsca7ktuobqm0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

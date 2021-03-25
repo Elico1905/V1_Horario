@@ -33,18 +33,43 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center">
+        android:layout_height="match_parent">
+
         <androidx.cardview.widget.CardView
-            android:clickable="true"
-            android:id="@+id/carta"
+            android:id="@+id/cardView_google"
             android:layout_width="match_parent"
-            app:cardCornerRadius="20dp"
-            android:layout_height="200dp"
-            android:backgroundTint="#EDFFFFFF"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:foregroundGravity="center"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            android:foreground="@drawable/effect_ripple_02"
+            app:cardCornerRadius="7dp"
+            app:contentPadding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_google" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:text="Inicia sesión con Google"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
