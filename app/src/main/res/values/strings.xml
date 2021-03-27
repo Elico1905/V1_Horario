@@ -2,6 +2,6 @@
     <string name="app_name">Horario</string>
     <string name="nulo">123</string>
     <string name="nada"></string>
-
+    <string name="prefs_file">com.elico.horario.PREFERENCE_FILE_KEY</string>
 
 </resources>

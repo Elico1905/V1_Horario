@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         home.setOnClickListener {
-            val intent: Intent = Intent(this, Login::class.java)
+            val intent: Intent = Intent(this, Home::class.java)
             startActivity(intent)
             finish()
         }
