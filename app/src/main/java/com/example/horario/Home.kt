@@ -133,7 +133,7 @@ class Home : AppCompatActivity() {
                 imm.hideSoftInputFromWindow(view.windowToken, 0)
             }
             window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
-
+            observeData()
             ocultarAgregar()
         }else{
             message("campo vacio",1)

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.horario.Login
+import com.example.horario.MainActivity
 import com.example.horario.R
 import kotlinx.android.synthetic.main.items_recycler_view.view.*
 
@@ -29,7 +30,11 @@ class MainAdapterAdmin (private val context: Context): RecyclerView.Adapter<Main
     override fun onBindViewHolder(holder: MainViewHolderAdmin, position: Int) {
         var grupoObj = datalist[position]
         holder.itemView.recycler_carta.setOnClickListener {
-            Toast.makeText(holder.itemView.context, "tocaste", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(holder.itemView.context, "tocaste", Toast.LENGTH_SHORT).show()
+            val context=holder.itemView.context
+            val intent = Intent( context, MainActivity::class.java)
+            context.startActivity(intent)
+
         }
         holder.bindView(grupoObj)
     }
