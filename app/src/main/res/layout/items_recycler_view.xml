@@ -42,6 +42,7 @@
                     android:layout_gravity="center"/>
 
                 <TextView
+                    android:id="@+id/recycler_grupo"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -72,6 +73,7 @@
                     android:textSize="20dp" />
 
                 <TextView
+                    android:id="@+id/recycler_nuMaterias"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="5"
@@ -94,6 +96,7 @@
                     android:textSize="20dp" />
 
                 <TextView
+                    android:id="@+id/recycler_horas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="50"

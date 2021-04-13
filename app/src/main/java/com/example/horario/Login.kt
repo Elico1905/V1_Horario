@@ -60,9 +60,9 @@ class Login : AppCompatActivity() {
                                     finish()
                                 } else {
                                     val prefs =getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
-                                    prefs.putString("correo", account.email ?: "")
-                                    prefs.putString("nombre", account.givenName ?: "")
-                                    prefs.putString("apellidos", account.familyName ?: "")
+                                    prefs.putString("correo", email)
+                                    prefs.putString("nombre", nombre)
+                                    prefs.putString("apellidos", apellidos)
                                     prefs.apply()
                                     val intent: Intent = Intent(this, Home::class.java)
                                     startActivity(intent)
