@@ -85,11 +85,23 @@ class Login : AppCompatActivity() {
         val localCorreo: String? = prefs.getString("correo", "2021ff")
         val localNombre: String? = prefs.getString("nombre", "2021ff")
         val localApellidos: String? = prefs.getString("apellidos", "2021ff")
-        if (!localCorreo.equals("2021ff") || !localNombre.equals("2021ff") || !localApellidos.equals("2021ff")){
 
-            val intent: Intent = Intent(this, Home::class.java)
-            startActivity(intent)
-            finish()
+        val prefsUser = getSharedPreferences(getString(R.string.prefs_file_data_user), Context.MODE_PRIVATE)
+        val grupo: String = prefsUser.getString("grupo", "false").toString()
+        val estado: Boolean = prefsUser.getBoolean("estado", false)
+
+
+        if (!localCorreo.equals("2021ff") || !localNombre.equals("2021ff") || !localApellidos.equals("2021ff")){
+            if (estado){
+                val intent: Intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("grupo",grupo)
+                startActivity(intent)
+                finish()
+            }else{
+                val intent: Intent = Intent(this, Home::class.java)
+                startActivity(intent)
+                finish()
+            }
         }
     }
 }

@@ -3,5 +3,6 @@
     <string name="nulo">123</string>
     <string name="nada"></string>
     <string name="prefs_file">com.elico.horario.PREFERENCE_FILE_KEY</string>
+    <string name="prefs_file_data_user">com.elico.horario.PREFERENCE_FILE_KEY_USER</string>
 
 </resources>

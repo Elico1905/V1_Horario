@@ -1,5 +1,6 @@
 package com.example.horario
 
+import android.content.Context
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
@@ -18,10 +19,24 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         setContentView(R.layout.activity_main)
 
+        val objintent: Intent = intent
+        var grupo: String? = objintent.getStringExtra("grupo")
+        main_grupo.text = grupo
+
+        val prefs = getSharedPreferences(getString(R.string.prefs_file_data_user), Context.MODE_PRIVATE).edit()
+        prefs.putBoolean("estado", true)
+        prefs.putString("grupo", grupo)
+        prefs.apply()
+
         home.setOnClickListener {
+
+            val prefs = getSharedPreferences(getString(R.string.prefs_file_data_user), Context.MODE_PRIVATE).edit()
+            prefs.clear()
+            prefs.apply()
+
             val intent: Intent = Intent(this, Home::class.java)
             startActivity(intent)
             finish()

@@ -2,6 +2,7 @@ package com.example.horario
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -29,12 +30,12 @@ class Home : AppCompatActivity() {
 
     private val viewModel by lazy { ViewModelProvider(this).get(MainViewModel::class.java) }
 
-
     private var lista = mutableListOf<grupoObj>();
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         setContentView(R.layout.activity_home)
 
 
@@ -42,6 +43,8 @@ class Home : AppCompatActivity() {
         home_recycler.layoutManager = LinearLayoutManager(this)
         home_recycler.adapter = adapter
         observeData()
+
+
 
         home_title.text = "User: ${getName()}"
 
@@ -93,6 +96,7 @@ class Home : AppCompatActivity() {
     }
 
     private fun ocultarAgregar(){
+        clearMensaje()
         home_fondo.visibility = View.GONE
         home_agregar.visibility = View.GONE
     }
@@ -124,15 +128,9 @@ class Home : AppCompatActivity() {
                     hashMapOf("grupo" to registro_nombre.text.toString(),
                               "correo" to getCorreo()))
 
-            registro_nombre.setText("")
-            message("Grupo agregado",2)
 
-            val view = this.currentFocus
-            if (view != null) {
-                val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                imm.hideSoftInputFromWindow(view.windowToken, 0)
-            }
-            window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+            message("Grupo agregado",2)
+            clearMensaje()
             observeData()
             ocultarAgregar()
         }else{
@@ -162,14 +160,22 @@ class Home : AppCompatActivity() {
         }
     }
 
+    private fun clearMensaje(){
+        registro_nombre.setText("")
+        val view = this.currentFocus
+        if (view != null) {
+            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(view.windowToken, 0)
+        }
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+    }
+
     fun observeData(){
         viewModel.fetchUserData("${getCorreo()}","correo").observe(this, Observer {
             adapter.setListData(it)
             adapter.notifyDataSetChanged()
             if (adapter.itemCount > 0) {
-                home_recycler.visibility = View.VISIBLE
-            } else {
-                Toast.makeText(this, "no hay datos", Toast.LENGTH_SHORT).show()
+                home_mensaje.visibility = View.GONE
             }
             lista = adapter.returnListData()
         })

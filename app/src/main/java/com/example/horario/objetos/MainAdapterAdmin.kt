@@ -33,8 +33,8 @@ class MainAdapterAdmin (private val context: Context): RecyclerView.Adapter<Main
             //Toast.makeText(holder.itemView.context, "tocaste", Toast.LENGTH_SHORT).show()
             val context=holder.itemView.context
             val intent = Intent( context, MainActivity::class.java)
+            intent.putExtra("grupo",grupoObj.nombre)
             context.startActivity(intent)
-
         }
         holder.bindView(grupoObj)
     }
