@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -252,7 +252,7 @@
                         android:text="@string/nulo"
                         android:textAlignment="center"
                         android:textColor="@color/Blanco_Letras"
-                        android:textSize="17dp" />
+                        android:textSize="17dp"/>
 
                     <Space
                         android:layout_width="6dp"
@@ -1953,7 +1953,7 @@
         android:background="#BC232323"
         android:clickable="true"
         android:gravity="center"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -1988,6 +1988,7 @@
 
                         <LinearLayout
                             android:id="@+id/main_fondo01"
+                            android:visibility="gone"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -2013,6 +2014,7 @@
 
                         <LinearLayout
                             android:id="@+id/main_fondo02"
+                            android:visibility="gone"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -2038,6 +2040,7 @@
 
                         <LinearLayout
                             android:id="@+id/main_fondo03"
+                            android:visibility="gone"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -2063,6 +2066,7 @@
 
                         <LinearLayout
                             android:id="@+id/main_fondo04"
+                            android:visibility="gone"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -2088,6 +2092,7 @@
 
                         <LinearLayout
                             android:id="@+id/main_fondo05"
+                            android:visibility="gone"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -2113,6 +2118,7 @@
 
                         <LinearLayout
                             android:id="@+id/main_fondo06"
+                            android:visibility="gone"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"

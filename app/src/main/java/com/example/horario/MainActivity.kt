@@ -21,6 +21,7 @@ import com.example.horario.objetos.grupoObj
 import com.example.horario.objetos.materiaObj
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
+import java.text.ParsePosition
 import com.example.horario.R.drawable.back_azul as back_azul1
 
 class MainActivity : AppCompatActivity() {
@@ -79,7 +80,7 @@ class MainActivity : AppCompatActivity() {
 
         main_agregar.setOnClickListener {
             if (main_nombre.text.isNotEmpty()) {
-                if (materias.size <= 5) {
+                if (main_fondo06.visibility == View.GONE){
                     bd.collection("materias").document("${getCorreo()}_${GRUPO}_${main_nombre.text.toString()}").set(
                             hashMapOf(
                                     "materia" to main_nombre.text.toString(),
@@ -87,14 +88,16 @@ class MainActivity : AppCompatActivity() {
                                     "grupo" to GRUPO,
                                     "color" to "${color}"
                             ))
-                    cargarMaterias(getCorreo(), GRUPO)
                     limpiar()
+                    ocultarmaterias();
                     main_btn01.setBackgroundResource(R.drawable.back_azul_s)
                     color = 1
                     main_nombre.setText("")
-                } else {
-                    Toast.makeText(this, "solo puedes agregar 6 materias", Toast.LENGTH_SHORT).show()
+                    cargarMaterias(getCorreo(), GRUPO)
+                }else{
+                    Toast.makeText(this, "solo puedes registrar 6 materias", Toast.LENGTH_SHORT).show()
                 }
+
             } else {
                 Toast.makeText(this, "faltan datos", Toast.LENGTH_SHORT).show()
             }
@@ -236,6 +239,9 @@ class MainActivity : AppCompatActivity() {
             main_materias.visibility = View.VISIBLE
             cajaTemp = caja
         }
+        println("--------")
+        println(caja.id.toString())
+        println("--------")
     }
 
     private fun selection(fondo: LinearLayout, texto: TextView?) {
@@ -246,43 +252,48 @@ class MainActivity : AppCompatActivity() {
             TODO("VERSION.SDK_INT < N")
         }
 
-        println("--------")
-        println(actualColor)
-        println("--------")
-
         when (actualColor) {
             -11309570 -> {
                 cajaTemp.setBackgroundResource(R.color.colorOnPrimary)
                 cajaTemp.setText(texto?.text.toString())
+                registrarPosition(texto?.text.toString(),cajaTemp.id,1)
             }
             -141259 -> {
                 cajaTemp.setBackgroundResource(R.color.amarillo)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.BLACK)
+                registrarPosition(texto?.text.toString(),cajaTemp.id,2)
             }
             -21696 -> {
                 cajaTemp.setBackgroundResource(R.color.naranja)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.BLACK)
+                registrarPosition(texto?.text.toString(),cajaTemp.id,3)
             }
             -11751600 -> {
                 cajaTemp.setBackgroundResource(R.color.verde)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.BLACK)
+                registrarPosition(texto?.text.toString(),cajaTemp.id,4)
             }
             -16742021 -> {
                 cajaTemp.setBackgroundResource(R.color.verde_fuerte)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.WHITE)
+                registrarPosition(texto?.text.toString(),cajaTemp.id,5)
             }
             -8211969 -> {
                 cajaTemp.setBackgroundResource(R.color.azul_claro)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.BLACK)
+                registrarPosition(texto?.text.toString(),cajaTemp.id,6)
             }
             -9079435 -> {
                 cajaTemp.setBackgroundResource(R.color.gris)
                 cajaTemp.setText("")
+
+                bd.collection("position")
+                        .document("${getCorreo()}_${GRUPO}_${cajaTemp.id}").delete()
             }
             else -> { // Note the block
                 cajaTemp.setBackgroundResource(R.color.gris)
@@ -321,28 +332,104 @@ class MainActivity : AppCompatActivity() {
 
     private fun cargarMaterias(correo: String, grupo: String) {
         materias.clear()
-        FirebaseFirestore.getInstance().collection("materias")
+        bd.collection("materias")
                 .whereEqualTo("correo", "${correo}")
                 .whereEqualTo("grupo", "${grupo}")
                 .get().addOnSuccessListener { result ->
+
                     for (document in result) {
                         materias.add(materiaObj(
                                 "${document.getString("materia").toString()}",
                                 "${document.getString("color").toString()}"
                         ))
                     }
+                    var i = 0;
+                    while (i < materias.size) {
+                        llenarmaterias(i, materias[i].color.toInt(), materias[i].nombre)
+                        i++
+                    }
                 }
-        cargarMateriasElentos()
     }
-    private fun cargarMateriasElentos(){
-        println("----------")
-        println("lista")
-        println(materias)
-        println(materias[0].nombre)
-        println("----------")
-        println("tamaño: ${materias.size}")
-        println("----------")
+    private fun ocultarmaterias(){
+        main_fondo01.visibility = View.GONE
+        main_fondo02.visibility = View.GONE
+        main_fondo03.visibility = View.GONE
+        main_fondo04.visibility = View.GONE
+        main_fondo05.visibility = View.GONE
+        main_fondo06.visibility = View.GONE
     }
+    private fun llenarmaterias(position: Int, color: Int, cadena: String) {
+
+        when (position) {
+            0 -> {
+                pintarFondo(main_fondo01, color)
+                main_materia01.setText("${cadena}")
+            }
+            1 -> {
+                pintarFondo(main_fondo02, color)
+                main_materia02.setText("${cadena}")
+            }
+            2 -> {
+                pintarFondo(main_fondo03, color)
+                main_materia03.setText("${cadena}")
+            }
+            3 -> {
+                pintarFondo(main_fondo04, color)
+                main_materia04.setText("${cadena}")
+            }
+            4 -> {
+                pintarFondo(main_fondo05, color)
+                main_materia05.setText("${cadena}")
+            }
+            5 -> {
+                pintarFondo(main_fondo06, color)
+                main_materia06.setText("${cadena}")
+            }
+            else -> {
+                Toast.makeText(this, "hay mas de 6 materias :( ${position}" , Toast.LENGTH_LONG).show()
+            }
+        }
+    }
+
+    private fun pintarFondo(fondo: LinearLayout?, color: Int) {
+        fondo?.visibility = View.VISIBLE
+        when (color) {
+            1 -> {
+                fondo?.setBackgroundResource(R.drawable.back_azul)
+            }
+            2 -> {
+                fondo?.setBackgroundResource(R.drawable.back_amarillo)
+            }
+            3 -> {
+                fondo?.setBackgroundResource(R.drawable.back_naranja)
+            }
+            4 -> {
+                fondo?.setBackgroundResource(R.drawable.back_verde)
+            }
+            5 -> {
+                fondo?.setBackgroundResource(R.drawable.back_verde_fuerte)
+            }
+            6 -> {
+                fondo?.setBackgroundResource(R.drawable.back_azul_claro)
+            }
+            else -> {
+                fondo?.setBackgroundResource(R.drawable.thumb)
+            }
+        }
+    }
+
+    private fun registrarPosition( materia:String ,idCaja:Int,color:Int){
+        bd.collection("position")
+                .document("${getCorreo()}_${GRUPO}_${idCaja}").set(
+                hashMapOf(
+                        "correo" to getCorreo(),
+                        "grupo" to GRUPO,
+                        "materia" to "${materia}",
+                        "idCaja" to "${idCaja}",
+                        "color" to "${color}"
+                ))
+    }
+
 
     override fun onBackPressed() {
         //super.onBackPressed()
