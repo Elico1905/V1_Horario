@@ -14,7 +14,7 @@
         android:layout_marginEnd="20dp"
         android:clickable="true"
         app:cardCornerRadius="15dp"
-        android:backgroundTint="@color/Blanco_Letras">
+        android:backgroundTint="@color/Blanco">
 
         <LinearLayout
             android:layout_width="match_parent"

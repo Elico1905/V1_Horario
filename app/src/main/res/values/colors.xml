@@ -7,6 +7,7 @@
 
 
     <color name="azul">#3F51B5</color>
+    <color name="azul_claro">#82B1FF</color>
     <color name="verde">#4CAF50</color>
     <color name="naranja">#FFAB40</color>
     <color name="gris">#757575</color>
@@ -17,4 +18,7 @@
     <color name="Blanco_Letras">#CEFFFFFF</color>
     <color name="Negro">#FF000000</color>
     <color name="Blanco">#FFFFFFFF</color>
+
+    <color name="barra01">#193935</color>
+
 </resources>

@@ -1,10 +1,11 @@
 package com.example.horario.objetos
 
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.firestore.FirebaseFirestore
 
-class Repo{
+class GETDATA {
 /*
     fun getUserData ():LiveData<MutableList<MensajesObj>>{
         val mutableData = MutableLiveData<MutableList<MensajesObj>>()
@@ -27,18 +28,5 @@ class Repo{
  */
 
 
-    fun getUserData (CONDITION:String,CAMPO:String):LiveData<MutableList<grupoObj>>{
-        val mutableData = MutableLiveData<MutableList<grupoObj>>()
-        FirebaseFirestore.getInstance().collection("grupos")
-                .whereEqualTo("${CAMPO}","${CONDITION}")
-                //.whereEqualTo("grupo","077ca")
-                .get().addOnSuccessListener { result ->
-            var listData = mutableListOf<grupoObj>()
-            for(document in result){
-                listData.add(grupoObj(document.getString("grupo").toString(),5,8))
-            }
-            mutableData.value = listData
-        }
-        return mutableData
-    }
+
 }

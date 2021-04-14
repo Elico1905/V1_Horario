@@ -1,8 +1,10 @@
 package com.example.horario
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ActivityInfo
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -18,6 +20,7 @@ import kotlinx.android.synthetic.main.activity_home.registro_nombre
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.horario.objetos.MainViewModel
@@ -38,6 +41,7 @@ class Home : AppCompatActivity() {
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         setContentView(R.layout.activity_home)
 
+        pintar()
 
         adapter = MainAdapterAdmin(this)
         home_recycler.layoutManager = LinearLayoutManager(this)
@@ -65,7 +69,7 @@ class Home : AppCompatActivity() {
         home_btn_cancelar_02.setOnClickListener {
             ocultarAgregar()
         }
-        home_btn_registrar.setOnClickListener{
+        home_btn_registrar.setOnClickListener {
             registrar()
         }
     }
@@ -81,40 +85,44 @@ class Home : AppCompatActivity() {
     }
 
     private fun mostrarSalir() {
+        pintar()
         home_fondo.visibility = View.VISIBLE
         home_salir.visibility = View.VISIBLE
     }
 
     private fun ocultarSalir() {
+        pintarRegreso()
         home_fondo.visibility = View.GONE
         home_salir.visibility = View.GONE
     }
 
-    private fun mostrarAgregar(){
+    private fun mostrarAgregar() {
+        pintar()
         home_fondo.visibility = View.VISIBLE
         home_agregar.visibility = View.VISIBLE
     }
 
-    private fun ocultarAgregar(){
+    private fun ocultarAgregar() {
+        pintarRegreso()
         clearMensaje()
         home_fondo.visibility = View.GONE
         home_agregar.visibility = View.GONE
     }
 
-    private fun getCorreo():String{
+    private fun getCorreo(): String {
         val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE)
         var correo = prefs.getString("correo", "2021ff").toString()
         return correo
     }
-    private fun getName():String{
+
+    private fun getName(): String {
         val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE)
         var nombre = prefs.getString("nombre", "2021ff").toString()
 
 
+        var aux: String = ""
 
-        var aux:String = ""
-
-        var i:Int = 1
+        var i: Int = 1
         while (i < nombre.length) {
             aux += nombre[i]
             i++
@@ -122,20 +130,39 @@ class Home : AppCompatActivity() {
 
         return "${nombre.get(0).toUpperCase()}${aux.toLowerCase()}"
     }
-    private fun registrar(){
-        if (registro_nombre.text.isNotEmpty()){
-            bd.collection("grupos").document("${getCorreo()}_${registro_nombre.text.toString()}").set(
-                    hashMapOf("grupo" to registro_nombre.text.toString(),
-                              "correo" to getCorreo()))
+
+    private fun registrar() {
+        if (registro_nombre.text.isNotEmpty()) {
+            if (!validarGrupos(registro_nombre.text.toString().toUpperCase())) {
+                bd.collection("grupos").document("${getCorreo()}_${registro_nombre.text.toString()}").set(
+                        hashMapOf("grupo" to registro_nombre.text.toString().toUpperCase(),
+                                "correo" to getCorreo()))
 
 
-            message("Grupo agregado",2)
-            clearMensaje()
-            observeData()
-            ocultarAgregar()
-        }else{
-            message("campo vacio",1)
+                message("Grupo agregado", 2)
+                clearMensaje()
+                observeData()
+                ocultarAgregar()
+            } else {
+                message("Ya existe un grupo registrado con ese nombre", 1)
+            }
+
+        } else {
+            message("campo vacio", 1)
         }
+    }
+
+    private fun validarGrupos(cadena: String): Boolean {
+        var resul = false
+        var tam = 0
+        while (tam < lista.size) {
+            if (cadena.equals(lista[tam].nombre)) {
+                resul = true
+                break
+            }
+            tam++
+        }
+        return resul
     }
 
     override fun onBackPressed() {
@@ -147,20 +174,21 @@ class Home : AppCompatActivity() {
             if (home_agregar.visibility == View.VISIBLE) {
                 ocultarAgregar()
             }
-        }else{
+        } else {
             mostrarSalir()
         }
     }
-    private fun message(cadena:String,possition:Int){
-        if (possition == 1){
+
+    private fun message(cadena: String, possition: Int) {
+        if (possition == 1) {
             Toast.makeText(this, "${cadena}", Toast.LENGTH_SHORT).show()
         }
-        if (possition == 2){
+        if (possition == 2) {
             Toast.makeText(this, "${cadena}", Toast.LENGTH_LONG).show()
         }
     }
 
-    private fun clearMensaje(){
+    private fun clearMensaje() {
         registro_nombre.setText("")
         val view = this.currentFocus
         if (view != null) {
@@ -170,18 +198,33 @@ class Home : AppCompatActivity() {
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
     }
 
-    fun observeData(){
-        viewModel.fetchUserData("${getCorreo()}","correo").observe(this, Observer {
+
+    private fun observeData() {
+        viewModel.fetchUserData("${getCorreo()}", "correo").observe(this, Observer {
             adapter.setListData(it)
             adapter.notifyDataSetChanged()
             if (adapter.itemCount > 0) {
                 home_mensaje.visibility = View.GONE
+            } else {
+                home_mensaje.visibility = View.VISIBLE
             }
             lista = adapter.returnListData()
+            home_cargando.visibility = View.GONE
+
+            pintarRegreso()
         })
 
     }
 
+    private fun pintar() {
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        window.statusBarColor = ContextCompat.getColor(applicationContext, R.color.barra01)
+    }
+
+    private fun pintarRegreso() {
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        window.statusBarColor = ContextCompat.getColor(applicationContext, R.color.colorPrimaryVariant)
+    }
 
 }
 
