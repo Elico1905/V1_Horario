@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         setContentView(R.layout.activity_main)
-
+        pintar()
 
         val objintent: Intent = intent
         var grupo: String? = objintent.getStringExtra("grupo")
@@ -50,6 +50,9 @@ class MainActivity : AppCompatActivity() {
 
         cargarMaterias(getCorreo(), GRUPO)
         cargarMateriasPosition(getCorreo(), GRUPO)
+
+        despintar()
+        main_cargando.visibility = View.GONE
 
         val prefs = getSharedPreferences(getString(R.string.prefs_file_data_user), Context.MODE_PRIVATE).edit()
         prefs.putBoolean("estado", true)
@@ -458,14 +461,7 @@ class MainActivity : AppCompatActivity() {
                 .whereEqualTo("correo", "${correo}")
                 .whereEqualTo("grupo", "${grupo}")
                 .get().addOnSuccessListener { result ->
-
                     for (document in result) {
-                        /*materias.add(materiaObj(
-                                "${document.getString("materia").toString()}",
-                                "${document.getString("color").toString()}"
-                        ))*/
-                        //println("-----------")
-                        //println("-----------")
                         colocarData(
                                 document.getString("idCaja").toString(),
                                 document.getString("color").toString(),

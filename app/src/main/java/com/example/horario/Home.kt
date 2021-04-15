@@ -226,5 +226,9 @@ class Home : AppCompatActivity() {
         window.statusBarColor = ContextCompat.getColor(applicationContext, R.color.colorPrimaryVariant)
     }
 
+    private fun eliminar(){
+        bd.collection("users")
+                .document("elico1904@gmail.com").delete()
+    }
 }
 
