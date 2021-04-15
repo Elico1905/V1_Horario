@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         main_grupo.text = grupo
 
         cargarMaterias(getCorreo(), GRUPO)
+        cargarMateriasPosition(getCorreo(), GRUPO)
 
         val prefs = getSharedPreferences(getString(R.string.prefs_file_data_user), Context.MODE_PRIVATE).edit()
         prefs.putBoolean("estado", true)
@@ -80,21 +81,22 @@ class MainActivity : AppCompatActivity() {
 
         main_agregar.setOnClickListener {
             if (main_nombre.text.isNotEmpty()) {
-                if (main_fondo06.visibility == View.GONE){
+                if (main_fondo06.visibility == View.GONE) {
                     bd.collection("materias").document("${getCorreo()}_${GRUPO}_${main_nombre.text.toString()}").set(
                             hashMapOf(
-                                    "materia" to main_nombre.text.toString(),
+                                    "materia" to getMateria(main_nombre.text.toString()),
                                     "correo" to getCorreo(),
                                     "grupo" to GRUPO,
                                     "color" to "${color}"
                             ))
+                    Toast.makeText(this, "Materia agregada", Toast.LENGTH_SHORT).show()
                     limpiar()
                     ocultarmaterias();
                     main_btn01.setBackgroundResource(R.drawable.back_azul_s)
                     color = 1
                     main_nombre.setText("")
                     cargarMaterias(getCorreo(), GRUPO)
-                }else{
+                } else {
                     Toast.makeText(this, "solo puedes registrar 6 materias", Toast.LENGTH_SHORT).show()
                 }
 
@@ -232,6 +234,16 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun getMateria(materia: String): String {
+        var aux: String = ""
+        var i:Int = 1
+        while (i < materia.length) {
+            aux += materia[i]
+            i++
+        }
+        return "${materia.get(0).toUpperCase()}${aux.toLowerCase()}"
+    }
+
 
     private fun showDetalles(caja: TextView) {
         if (!bloqueado) {
@@ -256,37 +268,37 @@ class MainActivity : AppCompatActivity() {
             -11309570 -> {
                 cajaTemp.setBackgroundResource(R.color.colorOnPrimary)
                 cajaTemp.setText(texto?.text.toString())
-                registrarPosition(texto?.text.toString(),cajaTemp.id,1)
+                registrarPosition(texto?.text.toString(), cajaTemp.id, 1)
             }
             -141259 -> {
                 cajaTemp.setBackgroundResource(R.color.amarillo)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.BLACK)
-                registrarPosition(texto?.text.toString(),cajaTemp.id,2)
+                registrarPosition(texto?.text.toString(), cajaTemp.id, 2)
             }
             -21696 -> {
                 cajaTemp.setBackgroundResource(R.color.naranja)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.BLACK)
-                registrarPosition(texto?.text.toString(),cajaTemp.id,3)
+                registrarPosition(texto?.text.toString(), cajaTemp.id, 3)
             }
             -11751600 -> {
                 cajaTemp.setBackgroundResource(R.color.verde)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.BLACK)
-                registrarPosition(texto?.text.toString(),cajaTemp.id,4)
+                registrarPosition(texto?.text.toString(), cajaTemp.id, 4)
             }
             -16742021 -> {
                 cajaTemp.setBackgroundResource(R.color.verde_fuerte)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.WHITE)
-                registrarPosition(texto?.text.toString(),cajaTemp.id,5)
+                registrarPosition(texto?.text.toString(), cajaTemp.id, 5)
             }
             -8211969 -> {
                 cajaTemp.setBackgroundResource(R.color.azul_claro)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.BLACK)
-                registrarPosition(texto?.text.toString(),cajaTemp.id,6)
+                registrarPosition(texto?.text.toString(), cajaTemp.id, 6)
             }
             -9079435 -> {
                 cajaTemp.setBackgroundResource(R.color.gris)
@@ -350,7 +362,8 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
     }
-    private fun ocultarmaterias(){
+
+    private fun ocultarmaterias() {
         main_fondo01.visibility = View.GONE
         main_fondo02.visibility = View.GONE
         main_fondo03.visibility = View.GONE
@@ -358,59 +371,66 @@ class MainActivity : AppCompatActivity() {
         main_fondo05.visibility = View.GONE
         main_fondo06.visibility = View.GONE
     }
+
     private fun llenarmaterias(position: Int, color: Int, cadena: String) {
 
         when (position) {
             0 -> {
-                pintarFondo(main_fondo01, color)
+                pintarFondo(main_fondo01, color,main_materia01)
                 main_materia01.setText("${cadena}")
             }
             1 -> {
-                pintarFondo(main_fondo02, color)
+                pintarFondo(main_fondo02, color,main_materia02)
                 main_materia02.setText("${cadena}")
             }
             2 -> {
-                pintarFondo(main_fondo03, color)
+                pintarFondo(main_fondo03, color,main_materia03)
                 main_materia03.setText("${cadena}")
             }
             3 -> {
-                pintarFondo(main_fondo04, color)
+                pintarFondo(main_fondo04, color,main_materia04)
                 main_materia04.setText("${cadena}")
             }
             4 -> {
-                pintarFondo(main_fondo05, color)
+                pintarFondo(main_fondo05, color,main_materia05)
                 main_materia05.setText("${cadena}")
             }
             5 -> {
-                pintarFondo(main_fondo06, color)
+                pintarFondo(main_fondo06, color,main_materia06)
                 main_materia06.setText("${cadena}")
             }
             else -> {
-                Toast.makeText(this, "hay mas de 6 materias :( ${position}" , Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "hay mas de 6 materias :( ${position}", Toast.LENGTH_LONG).show()
             }
         }
     }
 
-    private fun pintarFondo(fondo: LinearLayout?, color: Int) {
+    private fun pintarFondo(fondo: LinearLayout?, color: Int,caja: TextView) {
         fondo?.visibility = View.VISIBLE
         when (color) {
             1 -> {
                 fondo?.setBackgroundResource(R.drawable.back_azul)
+                caja?.setTextColor(Color.WHITE)
             }
             2 -> {
                 fondo?.setBackgroundResource(R.drawable.back_amarillo)
+                caja?.setTextColor(Color.BLACK)
             }
             3 -> {
                 fondo?.setBackgroundResource(R.drawable.back_naranja)
+                caja?.setTextColor(Color.BLACK)
             }
             4 -> {
                 fondo?.setBackgroundResource(R.drawable.back_verde)
+                caja?.setTextColor(Color.WHITE)
             }
             5 -> {
                 fondo?.setBackgroundResource(R.drawable.back_verde_fuerte)
+                caja?.setTextColor(Color.WHITE)
             }
             6 -> {
                 fondo?.setBackgroundResource(R.drawable.back_azul_claro)
+                caja?.setTextColor(Color.BLACK)
             }
             else -> {
                 fondo?.setBackgroundResource(R.drawable.thumb)
@@ -418,18 +438,344 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun registrarPosition( materia:String ,idCaja:Int,color:Int){
+    private fun registrarPosition(materia: String, idCaja: Int, color: Int) {
         bd.collection("position")
                 .document("${getCorreo()}_${GRUPO}_${idCaja}").set(
-                hashMapOf(
-                        "correo" to getCorreo(),
-                        "grupo" to GRUPO,
-                        "materia" to "${materia}",
-                        "idCaja" to "${idCaja}",
-                        "color" to "${color}"
-                ))
+                        hashMapOf(
+                                "correo" to getCorreo(),
+                                "grupo" to GRUPO,
+                                "materia" to "${materia}",
+                                "idCaja" to "${idCaja}",
+                                "color" to "${color}"
+                        ))
     }
 
+    private fun cargarMateriasPosition(correo: String, grupo: String) {
+        println("-------")
+        println("paso")
+        println("-------")
+        bd.collection("position")
+                .whereEqualTo("correo", "${correo}")
+                .whereEqualTo("grupo", "${grupo}")
+                .get().addOnSuccessListener { result ->
+
+                    for (document in result) {
+                        /*materias.add(materiaObj(
+                                "${document.getString("materia").toString()}",
+                                "${document.getString("color").toString()}"
+                        ))*/
+                        //println("-----------")
+                        //println("-----------")
+                        colocarData(
+                                document.getString("idCaja").toString(),
+                                document.getString("color").toString(),
+                                document.getString("materia").toString()
+                        )
+                    }
+
+                }
+    }
+
+    private fun colocarData(aux: String, aux2: String, materia: String) {
+        var color: Int = aux2.toInt()
+        var id: Int = aux.toInt()
+
+        when (id) {
+            // 1 - 5
+            2131230811 -> {
+                c1.text = "${materia}"
+                colocarColor(color,c1)
+            }
+            2131230822 -> {
+                c2.text = "${materia}"
+                colocarColor(color,c2)
+            }
+            2131230833 -> {
+                c3.text = "${materia}"
+                colocarColor(color,c3)
+            }
+            2131230844 -> {
+                c4.text = "${materia}"
+                colocarColor(color,c4)
+            }
+            2131230855 -> {
+                c5.text = "${materia}"
+                colocarColor(color,c5)
+            }
+            // 6 - 10
+            2131230866 -> {
+                c6.text = "${materia}"
+                colocarColor(color,c6)
+            }
+            2131230868 -> {
+                c7.text = "${materia}"
+                colocarColor(color,c7)
+            }
+            2131230869 -> {
+                c8.text = "${materia}"
+                colocarColor(color,c8)
+            }
+            2131230870 -> {
+                c9.text = "${materia}"
+                colocarColor(color,c9)
+            }
+            2131230812 -> {
+                c10.text = "${materia}"
+                colocarColor(color,c10)
+            }
+            // 11 - 15
+            2131230813 -> {
+                c11.text = "${materia}"
+                colocarColor(color,c11)
+            }
+            2131230814 -> {
+                c12.text = "${materia}"
+                colocarColor(color,c12)
+            }
+            2131230815 -> {
+                c13.text = "${materia}"
+                colocarColor(color,c13)
+            }
+            2131230816 -> {
+                c14.text = "${materia}"
+                colocarColor(color,c14)
+            }
+            2131230817 -> {
+                c15.text = "${materia}"
+                colocarColor(color,c15)
+            }
+            // 16 - 20
+            2131230818 -> {
+                c16.text = "${materia}"
+                colocarColor(color,c16)
+            }
+            2131230819 -> {
+                c17.text = "${materia}"
+                colocarColor(color,c17)
+            }
+            2131230820 -> {
+                c18.text = "${materia}"
+                colocarColor(color,c18)
+            }
+            2131230821 -> {
+                c19.text = "${materia}"
+                colocarColor(color,c19)
+            }
+            2131230823 -> {
+                c20.text = "${materia}"
+                colocarColor(color,c20)
+            }
+            // 21 - 25
+            2131230824 -> {
+                c21.text = "${materia}"
+                colocarColor(color,c21)
+            }
+            2131230825 -> {
+                c22.text = "${materia}"
+                colocarColor(color,c22)
+            }
+            2131230826 -> {
+                c23.text = "${materia}"
+                colocarColor(color,c23)
+            }
+            2131230827 -> {
+                c24.text = "${materia}"
+                colocarColor(color,c24)
+            }
+            2131230828 -> {
+                c25.text = "${materia}"
+                colocarColor(color,c25)
+            }
+            // 26 - 30
+            2131230829 -> {
+                c26.text = "${materia}"
+                colocarColor(color,c26)
+            }
+            2131230830 -> {
+                c27.text = "${materia}"
+                colocarColor(color,c27)
+            }
+            2131230831 -> {
+                c28.text = "${materia}"
+                colocarColor(color,c28)
+            }
+            2131230832 -> {
+                c29.text = "${materia}"
+                colocarColor(color,c29)
+            }
+            2131230834 -> {
+                c30.text = "${materia}"
+                colocarColor(color,c30)
+            }
+            // 31 - 35
+            2131230835 -> {
+                c31.text = "${materia}"
+                colocarColor(color,c31)
+            }
+            2131230836 -> {
+                c32.text = "${materia}"
+                colocarColor(color,c32)
+            }
+            2131230837 -> {
+                c33.text = "${materia}"
+                colocarColor(color,c33)
+            }
+            2131230838 -> {
+                c34.text = "${materia}"
+                colocarColor(color,c34)
+            }
+            2131230839 -> {
+                c35.text = "${materia}"
+                colocarColor(color,c35)
+            }
+
+            // 36 - 40
+            2131230840 -> {
+                c36.text = "${materia}"
+                colocarColor(color,c36)
+            }
+            2131230841 -> {
+                c37.text = "${materia}"
+                colocarColor(color,c37)
+            }
+            2131230842 -> {
+                c38.text = "${materia}"
+                colocarColor(color,c38)
+            }
+            2131230843 -> {
+                c39.text = "${materia}"
+                colocarColor(color,c39)
+            }
+            2131230845 -> {
+                c40.text = "${materia}"
+                colocarColor(color,c40)
+            }
+
+            // 41 - 45
+            2131230846 -> {
+                c41.text = "${materia}"
+                colocarColor(color,c41)
+            }
+            2131230847 -> {
+                c42.text = "${materia}"
+                colocarColor(color,c42)
+            }
+            2131230848 -> {
+                c43.text = "${materia}"
+                colocarColor(color,c43)
+            }
+            2131230849 -> {
+                c44.text = "${materia}"
+                colocarColor(color,c44)
+            }
+            2131230850 -> {
+                c45.text = "${materia}"
+                colocarColor(color,c45)
+            }
+            // 46 - 50
+            2131230851 -> {
+                c46.text = "${materia}"
+                colocarColor(color,c46)
+            }
+            2131230852 -> {
+                c47.text = "${materia}"
+                colocarColor(color,c47)
+            }
+            2131230853 -> {
+                c48.text = "${materia}"
+                colocarColor(color,c48)
+            }
+            2131230854 -> {
+                c49.text = "${materia}"
+                colocarColor(color,c49)
+            }
+            2131230856 -> {
+                c50.text = "${materia}"
+                colocarColor(color,c50)
+            }
+
+            // 51 - 55
+            2131230857 -> {
+                c51.text = "${materia}"
+                colocarColor(color,c51)
+            }
+            2131230858 -> {
+                c52.text = "${materia}"
+                colocarColor(color,c52)
+            }
+            2131230859 -> {
+                c53.text = "${materia}"
+                colocarColor(color,c53)
+            }
+            2131230860 -> {
+                c54.text = "${materia}"
+                colocarColor(color,c54)
+            }
+            2131230861 -> {
+                c55.text = "${materia}"
+                colocarColor(color,c55)
+            }
+            // 56 - 60
+            2131230862 -> {
+                c56.text = "${materia}"
+                colocarColor(color,c56)
+            }
+            2131230863 -> {
+                c57.text = "${materia}"
+                colocarColor(color,c57)
+            }
+            2131230864 -> {
+                c58.text = "${materia}"
+                colocarColor(color,c58)
+            }
+            2131230865 -> {
+                c59.text = "${materia}"
+                colocarColor(color,c59)
+            }
+            2131230867 -> {
+                c60.text = "${materia}"
+                colocarColor(color,c60)
+            }
+
+            else -> {
+                //Toast.makeText(this, "algo salio mal", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun colocarColor(color: Int,contenedor:TextView) {
+        when (color) {
+            1 -> {
+                contenedor?.setBackgroundResource(R.color.colorOnPrimary)
+                contenedor.setTextColor(Color.WHITE)
+            }
+            2 -> {
+                contenedor?.setBackgroundResource(R.color.amarillo)
+                contenedor.setTextColor(Color.BLACK)
+            }
+            3 -> {
+                contenedor?.setBackgroundResource(R.color.naranja)
+                contenedor.setTextColor(Color.BLACK)
+            }
+            4 -> {
+                contenedor?.setBackgroundResource(R.color.verde)
+                contenedor.setTextColor(Color.BLACK)
+            }
+            5 -> {
+                contenedor?.setBackgroundResource(R.color.verde_fuerte)
+                contenedor.setTextColor(Color.WHITE)
+            }
+            6 -> {
+                contenedor?.setBackgroundResource(R.color.azul_claro)
+                contenedor.setTextColor(Color.BLACK)
+            }
+            else -> {
+                contenedor?.setBackgroundResource(R.color.gris)
+                contenedor.setTextColor(Color.WHITE)
+            }
+        }
+
+    }
 
     override fun onBackPressed() {
         //super.onBackPressed()

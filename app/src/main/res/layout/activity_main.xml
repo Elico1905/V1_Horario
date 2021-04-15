@@ -26,9 +26,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="20dp"
-                android:fontFamily="sans-serif-smallcaps"
+
                 android:text="Grupo: "
-                android:textColor="#000000"
+                android:textColor="@color/Blanco_Letras"
                 android:textSize="30dp" />
 
             <TextView
@@ -39,7 +39,7 @@
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="078CA"
-                android:textColor="#000000"
+                android:textColor="@color/Blanco_Letras"
                 android:textSize="30dp" />
 
             <ImageView
