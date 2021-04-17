@@ -4,36 +4,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login"
-    android:background="@color/verde_fuerte">
-
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/ic_superior_02"
-        android:scaleType="fitStart"/>
-
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom"
-        android:rotationX="180"
-        android:rotationY="180"
-        android:scaleType="fitStart"
-        android:src="@drawable/ic_superior" />
-
-</RelativeLayout>
+    tools:context=".Login">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="matrix"
+            app:srcCompat="@drawable/foto" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#2F009688" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:gravity="bottom"
+            android:rotationY="180"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_centro" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-130dp"
+            android:fontFamily="@font/jerseym54"
+            android:gravity="center"
+            android:text="H''E''L''L''O"
+            android:textColor="@color/Blanco_Letras"
+            android:textSize="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-15dp"
+            android:gravity="center"
+            android:text="Sing in to your acount"
+            android:textColor="@color/Blanco_Letras"
+            android:textSize="28dp" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rotationY="180"
+            android:scaleType="fitEnd"
+            app:srcCompat="@drawable/ic_inferior" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="end"
+            android:text="version 1.0"
+            android:textColor="@color/Blanco_Letras"
+            android:textSize="17dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:paddingTop="120dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView_google"
@@ -69,7 +142,25 @@
         </androidx.cardview.widget.CardView>
 
 
+    </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/login_cargando"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EB232323"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Cargando..."
+            android:textAlignment="center"
+            android:textColor="@color/Blanco"
+            android:textSize="48dp" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

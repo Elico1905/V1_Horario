@@ -33,7 +33,7 @@ class Home : AppCompatActivity() {
 
     private val viewModel by lazy { ViewModelProvider(this).get(MainViewModel::class.java) }
 
-    private var lista = mutableListOf<grupoObj>();
+    var lista = mutableListOf<grupoObj>();
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -134,7 +134,7 @@ class Home : AppCompatActivity() {
     private fun registrar() {
         if (registro_nombre.text.isNotEmpty()) {
             if (!validarGrupos(registro_nombre.text.toString().toUpperCase())) {
-                bd.collection("grupos").document("${getCorreo()}_${registro_nombre.text.toString()}").set(
+                bd.collection("grupos").document("${getCorreo()}_${registro_nombre.text.toString().toUpperCase()}").set(
                         hashMapOf("grupo" to registro_nombre.text.toString().toUpperCase(),
                                 "correo" to getCorreo()))
 

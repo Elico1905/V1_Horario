@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_02_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Horario">
-        <activity android:name=".Registrar"></activity>
+        <activity android:name=".Pruebas"></activity>
+        <activity android:name=".Registrar" />
         <activity android:name=".Home" />
         <activity android:name=".Login">
             <intent-filter>
