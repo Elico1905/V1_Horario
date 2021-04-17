@@ -251,7 +251,7 @@
                         android:text="@string/nulo"
                         android:textAlignment="center"
                         android:textColor="@color/Blanco_Letras"
-                        android:textSize="17dp"/>
+                        android:textSize="17dp" />
 
                     <Space
                         android:layout_width="6dp"
@@ -1815,72 +1815,122 @@
 
                     </LinearLayout>
 
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="20dp">
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginRight="20dp"
-                        android:orientation="horizontal">
+                            <Space
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content" />
 
-                        <TextView
-                            android:id="@+id/main_btn01"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:background="@drawable/back_azul_s" />
+                            <TextView
+                                android:id="@+id/main_btn01"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/back_azul_s" />
 
-                        <Space
-                            android:layout_width="30dp"
-                            android:layout_height="wrap_content" />
+                            <Space
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content" />
 
-                        <TextView
-                            android:id="@+id/main_btn02"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:background="@drawable/back_amarillo" />
+                            <TextView
+                                android:id="@+id/main_btn02"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/back_amarillo" />
 
-                        <Space
-                            android:layout_width="30dp"
-                            android:layout_height="wrap_content" />
+                            <Space
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content" />
 
-                        <TextView
-                            android:id="@+id/main_btn03"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:background="@drawable/back_naranja" />
+                            <TextView
+                                android:id="@+id/main_btn03"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/back_naranja" />
 
-                        <Space
-                            android:layout_width="30dp"
-                            android:layout_height="wrap_content" />
+                            <Space
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content" />
 
-                        <TextView
-                            android:id="@+id/main_btn04"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:background="@drawable/back_verde" />
+                            <TextView
+                                android:id="@+id/main_btn04"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/back_verde" />
 
-                        <Space
-                            android:layout_width="30dp"
-                            android:layout_height="wrap_content" />
+                            <Space
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content" />
 
-                        <TextView
-                            android:id="@+id/main_btn05"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:background="@drawable/back_verde_fuerte" />
+                            <TextView
+                                android:id="@+id/main_btn05"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/back_verde_fuerte" />
 
-                        <Space
-                            android:layout_width="30dp"
-                            android:layout_height="wrap_content" />
+                            <Space
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content" />
 
-                        <TextView
-                            android:id="@+id/main_btn06"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:background="@drawable/back_azul_claro" />
-                    </LinearLayout>
+                            <TextView
+                                android:id="@+id/main_btn06"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/back_azul_claro" />
+
+
+                            <Space
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/back_azul_claro" />
+
+                            <Space
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/back_azul_claro" />
+
+                            <Space
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/back_azul_claro" />
+
+                            <Space
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/back_azul_claro" />
+
+                            <Space
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+
 
                     <TextView
                         android:layout_width="match_parent"
@@ -1967,7 +2017,6 @@
 
                         <LinearLayout
                             android:id="@+id/main_fondo01"
-                            android:visibility="gone"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -1976,7 +2025,8 @@
                             android:clickable="true"
                             android:foreground="@drawable/effect_ripple_04"
                             android:gravity="center"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:visibility="gone">
 
                             <TextView
                                 android:id="@+id/main_materia01"
@@ -1993,7 +2043,6 @@
 
                         <LinearLayout
                             android:id="@+id/main_fondo02"
-                            android:visibility="gone"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -2002,7 +2051,8 @@
                             android:clickable="true"
                             android:foreground="@drawable/effect_ripple_04"
                             android:gravity="center"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:visibility="gone">
 
                             <TextView
                                 android:id="@+id/main_materia02"
@@ -2019,7 +2069,6 @@
 
                         <LinearLayout
                             android:id="@+id/main_fondo03"
-                            android:visibility="gone"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -2028,7 +2077,8 @@
                             android:clickable="true"
                             android:foreground="@drawable/effect_ripple_04"
                             android:gravity="center"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:visibility="gone">
 
                             <TextView
                                 android:id="@+id/main_materia03"
@@ -2045,7 +2095,6 @@
 
                         <LinearLayout
                             android:id="@+id/main_fondo04"
-                            android:visibility="gone"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -2054,7 +2103,8 @@
                             android:clickable="true"
                             android:foreground="@drawable/effect_ripple_04"
                             android:gravity="center"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:visibility="gone">
 
                             <TextView
                                 android:id="@+id/main_materia04"
@@ -2071,7 +2121,6 @@
 
                         <LinearLayout
                             android:id="@+id/main_fondo05"
-                            android:visibility="gone"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -2080,7 +2129,8 @@
                             android:clickable="true"
                             android:foreground="@drawable/effect_ripple_04"
                             android:gravity="center"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:visibility="gone">
 
                             <TextView
                                 android:id="@+id/main_materia05"
@@ -2097,7 +2147,6 @@
 
                         <LinearLayout
                             android:id="@+id/main_fondo06"
-                            android:visibility="gone"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -2106,7 +2155,8 @@
                             android:clickable="true"
                             android:foreground="@drawable/effect_ripple_04"
                             android:gravity="center"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:visibility="gone">
 
                             <TextView
                                 android:id="@+id/main_materia06"
@@ -2182,11 +2232,11 @@
                     android:id="@+id/main_bajar"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:rotation="-90"
-                    android:src="@drawable/ic_back_02"
-                    android:layout_marginBottom="20dp"
                     android:layout_marginStart="10dp"
-                    android:foreground="@drawable/effect_ripple_04"/>
+                    android:layout_marginBottom="20dp"
+                    android:foreground="@drawable/effect_ripple_04"
+                    android:rotation="-90"
+                    android:src="@drawable/ic_back_02" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -2197,11 +2247,11 @@
                     android:id="@+id/main_subir"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:rotation="90"
-                    android:src="@drawable/ic_back_02"
-                    android:layout_marginTop="20dp"
                     android:layout_marginStart="10dp"
-                    android:foreground="@drawable/effect_ripple_04"/>
+                    android:layout_marginTop="20dp"
+                    android:foreground="@drawable/effect_ripple_04"
+                    android:rotation="90"
+                    android:src="@drawable/ic_back_02" />
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
@@ -2212,29 +2262,29 @@
         android:id="@+id/main_cargando"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:background="@color/oculto"
         android:clickable="true"
+        android:gravity="center"
         android:visibility="gone">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
             android:text="Cargando..."
             android:textAlignment="center"
             android:textColor="@color/Blanco_Letras"
-            android:textSize="48dp"
-            android:fontFamily="sans-serif-smallcaps"/>
+            android:textSize="48dp" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/main_salir"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:background="@color/oculto"
         android:clickable="true"
-        android:visibility="gone"
-        android:background="@color/oculto">
+        android:gravity="center"
+        android:visibility="gone">
 
         <androidx.cardview.widget.CardView
             android:layout_width="300dp"
@@ -2251,60 +2301,64 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
                     android:text="¿Deseas ir a home?"
                     android:textAlignment="center"
-                    android:textSize="29dp"
-                    android:layout_marginTop="15dp"/>
+                    android:textSize="29dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_gravity="center"
                     android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
                     android:layout_marginTop="30dp"
-                    android:layout_gravity="center">
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/home_btn_go_cancelar"
-                        android:layout_weight="1"
-                        android:clickable="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
                         android:background="@drawable/azul_button"
-                        android:text="Cancelar"
-                        android:textSize="15dp"
-                        android:textColor="@color/Blanco"
-                        android:paddingTop="7dp"
-                        android:paddingBottom="7dp"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
+                        android:clickable="true"
                         android:foreground="@drawable/effect_ripple_04"
-                        android:textAlignment="center"/>
+                        android:paddingLeft="10dp"
+                        android:paddingTop="7dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="7dp"
+                        android:text="Cancelar"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco"
+                        android:textSize="15dp" />
+
                     <Space
                         android:layout_width="20dp"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent" />
+
                     <TextView
                         android:id="@+id/home_btn_go_ir"
-                        android:layout_weight="1"
-                        android:clickable="true"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
                         android:background="@drawable/azul_button"
-                        android:text="ir a home"
-                        android:textSize="15dp"
-                        android:textColor="@color/Blanco"
-                        android:paddingTop="7dp"
-                        android:paddingBottom="7dp"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
+                        android:clickable="true"
                         android:foreground="@drawable/effect_ripple_04"
-                        android:textAlignment="center"/>
+                        android:paddingLeft="10dp"
+                        android:paddingTop="7dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="7dp"
+                        android:text="ir a home"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blanco"
+                        android:textSize="15dp" />
                 </LinearLayout>
+
                 <Space
                     android:layout_width="wrap_content"
-                    android:layout_height="10dp"/>
+                    android:layout_height="10dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
