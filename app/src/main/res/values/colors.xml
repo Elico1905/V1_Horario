@@ -13,6 +13,10 @@
     <color name="gris">#757575</color>
     <color name="amarillo">#FDD835</color>
     <color name="verde_fuerte">#00897B</color>
+    <color name="rojo">#ED536E</color>
+    <color name="morado">#b23cfd</color>
+    <color name="cafe">#a1765a</color>
+
 
     <color name="oculto">#BC232323</color>
     <color name="Blanco_Letras">#CEFFFFFF</color>
