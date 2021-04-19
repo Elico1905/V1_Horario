@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.horario.objetos.materiaObj
+import com.example.horario.objetos.positionObj
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
 import com.example.horario.R.drawable.back_azul as back_azul1
@@ -29,9 +30,9 @@ class MainActivity : AppCompatActivity() {
     private val bd = FirebaseFirestore.getInstance()
     private lateinit var cajaTemp: TextView
 
-    private var materias = mutableListOf<materiaObj>();
-
-    private var listacolor = mutableListOf<String>();
+    private var materias = mutableListOf<materiaObj>()
+    private var listacolor = mutableListOf<String>()
+    private var listaPosition = mutableListOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -323,62 +324,63 @@ class MainActivity : AppCompatActivity() {
             -11309570 -> {
                 cajaTemp.setBackgroundResource(R.color.colorOnPrimary)
                 cajaTemp.setText(texto?.text.toString())
-                registrarPosition(texto?.text.toString(), cajaTemp.id, 1)
+                registrarPosition(texto?.text.toString(), 1)
             }
             -141259 -> {
                 cajaTemp.setBackgroundResource(R.color.amarillo)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.BLACK)
-                registrarPosition(texto?.text.toString(), cajaTemp.id, 2)
+                registrarPosition(texto?.text.toString(), 2)
             }
             -21696 -> {
                 cajaTemp.setBackgroundResource(R.color.naranja)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.BLACK)
-                registrarPosition(texto?.text.toString(), cajaTemp.id, 3)
+                registrarPosition(texto?.text.toString(), 3)
             }
             -11751600 -> {
                 cajaTemp.setBackgroundResource(R.color.verde)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.BLACK)
-                registrarPosition(texto?.text.toString(), cajaTemp.id, 4)
+                registrarPosition(texto?.text.toString(), 4)
             }
             -16742021 -> {
                 cajaTemp.setBackgroundResource(R.color.verde_fuerte)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.WHITE)
-                registrarPosition(texto?.text.toString(), cajaTemp.id, 5)
+                registrarPosition(texto?.text.toString(), 5)
             }
             -8211969 -> {
                 cajaTemp.setBackgroundResource(R.color.azul_claro)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.BLACK)
-                registrarPosition(texto?.text.toString(), cajaTemp.id, 6)
+                registrarPosition(texto?.text.toString(), 6)
             }
             -446124 -> {
                 cajaTemp.setBackgroundResource(R.color.rojo)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.WHITE)
-                registrarPosition(texto?.text.toString(), cajaTemp.id, 7)
+                registrarPosition(texto?.text.toString(), 7)
             }
             -5096195 -> {
                 cajaTemp.setBackgroundResource(R.color.morado)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.WHITE)
-                registrarPosition(texto?.text.toString(), cajaTemp.id, 8)
+                registrarPosition(texto?.text.toString(), 8)
             }
             -6195622 -> {
                 cajaTemp.setBackgroundResource(R.color.cafe)
                 cajaTemp.setText(texto?.text.toString())
                 cajaTemp.setTextColor(Color.WHITE)
-                registrarPosition(texto?.text.toString(), cajaTemp.id, 9)
+                registrarPosition(texto?.text.toString(), 9)
+                Toast.makeText(this, "${ID}", Toast.LENGTH_SHORT).show()
             }
 
             -9079435 -> {
                 cajaTemp.setBackgroundResource(R.color.gris)
                 cajaTemp.setText("")
                 bd.collection("position")
-                        .document("${getCorreo()}_${GRUPO}_${cajaTemp.id}").delete()
+                        .document("${getCorreo()}_${GRUPO}_${ID}").delete()
             }
 
             else -> {
@@ -546,9 +548,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun registrarPosition(materia: String, idCaja: Int, color: Int) {
+    private fun registrarPosition(materia: String, color: Int) {
         bd.collection("position")
-                .document("${getCorreo()}_${GRUPO}_${idCaja}").set(
+                .document("${getCorreo()}_${GRUPO}_${ID}").set(
                         hashMapOf(
                                 "correo" to getCorreo(),
                                 "grupo" to GRUPO,
@@ -578,7 +580,10 @@ class MainActivity : AppCompatActivity() {
     private fun colocarData(id: String, aux2: String, materia: String) {
         var color: Int = aux2.toInt()
 
-
+         listaPosition.add(id)
+        println("-----\nlista agregado")
+        println(listaPosition)
+        println("-----")
         when (id) {
             "c1" -> {
                 c1.text = "${materia}"
@@ -936,6 +941,5 @@ class MainActivity : AppCompatActivity() {
 
     private fun validarSelectionColor(): Boolean {
         return color != 0
-        //Toast.makeText(this, "${color}", Toast.LENGTH_SHORT).show()
     }
 }

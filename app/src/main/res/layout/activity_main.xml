@@ -1745,7 +1745,7 @@
         android:background="#BC232323"
         android:clickable="true"
         android:gravity="center"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -1778,16 +1778,16 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
+                        android:background="@drawable/thumb02"
                         android:ems="10"
                         android:hint="Materia"
                         android:inputType="textPersonName"
                         android:maxLength="10"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
                         android:textAlignment="center"
                         android:textColor="#3A3A3A"
-                        android:textSize="26dp"
-                        android:background="@drawable/thumb02"
-                        android:paddingTop="4dp"
-                        android:paddingBottom="4dp"/>
+                        android:textSize="26dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1831,10 +1831,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="90dp"
                         android:layout_marginTop="20dp">
+
                         <LinearLayout
-                            android:layout_marginTop="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
                             android:orientation="horizontal">
 
 
@@ -1842,67 +1843,67 @@
                                 android:id="@+id/main_btn01"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/back_azul"
-                                android:layout_marginLeft="30dp"/>
+                                android:layout_marginLeft="30dp"
+                                android:background="@drawable/back_azul" />
 
                             <TextView
                                 android:id="@+id/main_btn02"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/back_amarillo"
-                                android:layout_marginLeft="30dp"/>
+                                android:layout_marginLeft="30dp"
+                                android:background="@drawable/back_amarillo" />
 
                             <TextView
                                 android:id="@+id/main_btn03"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/back_naranja"
-                                android:layout_marginLeft="30dp"/>
+                                android:layout_marginLeft="30dp"
+                                android:background="@drawable/back_naranja" />
 
                             <TextView
                                 android:id="@+id/main_btn04"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/back_verde"
-                                android:layout_marginLeft="30dp"/>
+                                android:layout_marginLeft="30dp"
+                                android:background="@drawable/back_verde" />
 
 
                             <TextView
                                 android:id="@+id/main_btn05"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/back_verde_fuerte"
-                                android:layout_marginLeft="30dp"/>
+                                android:layout_marginLeft="30dp"
+                                android:background="@drawable/back_verde_fuerte" />
 
 
                             <TextView
                                 android:id="@+id/main_btn06"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/back_azul_claro"
-                                android:layout_marginLeft="30dp"/>
+                                android:layout_marginLeft="30dp"
+                                android:background="@drawable/back_azul_claro" />
 
 
                             <TextView
                                 android:id="@+id/main_btn07"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/back_rojo"
-                                android:layout_marginLeft="30dp"/>
+                                android:layout_marginLeft="30dp"
+                                android:background="@drawable/back_rojo" />
 
                             <TextView
                                 android:id="@+id/main_btn08"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/back_morado"
-                                android:layout_marginLeft="30dp"/>
+                                android:layout_marginLeft="30dp"
+                                android:background="@drawable/back_morado" />
 
                             <TextView
                                 android:id="@+id/main_btn09"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/back_cafe"
-                                android:layout_marginLeft="30dp"/>
+                                android:layout_marginLeft="30dp"
+                                android:background="@drawable/back_cafe" />
 
                             <Space
                                 android:layout_width="30dp"
@@ -1913,25 +1914,6 @@
 
                     </HorizontalScrollView>
 
-
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="10dp"
-                        android:background="@color/colorPrimary" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="sans-serif-smallcaps"
-                        android:paddingTop="10dp"
-                        android:text="Editar Materias"
-                        android:textAlignment="center"
-                        android:textSize="30dp" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -2008,7 +1990,7 @@
                             android:clickable="true"
                             android:foreground="@drawable/effect_ripple_04"
                             android:gravity="center"
-                            android:orientation="vertical"
+                            android:orientation="horizontal"
                             android:visibility="gone">
 
                             <TextView
@@ -2231,7 +2213,6 @@
                                 android:textSize="28dp" />
 
                         </LinearLayout>
-
 
 
                         <LinearLayout
